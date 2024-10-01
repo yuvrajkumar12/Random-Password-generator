@@ -74,5 +74,20 @@ h1{
     color:var(--vb-Yellow);
     opacity:0.65;
     text-transform:uppercase;
-    /* transform: translateY(50%); */
+    transform: translateY(-50%);
+}
+
+.display-container button{
+    position:absolute;
+    top:50%;
+    right:1.5rem;
+    transform: translateY(-50%);
+}
+
+.input-container{
+    width: 100%;
+    background-color: var(--dk-violet);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid var(--lt--violete);
 }
