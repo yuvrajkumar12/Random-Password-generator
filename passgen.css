@@ -152,5 +152,30 @@ h1{
     position: relative;
     border-radius: 0.35rem;
 }
-181
 
+.check input:checked{
+    background-color: var(--vb-cyan);
+}
+
+.check input:checked::before {
+    content:'✔';
+    position:absolute;
+    color:var(--dk-text);
+    font-size:1.05rem;
+    font-weight:600;
+    left:50%;
+    top:-10px;
+    transform: translatex(-50%) translateY(40%);
+}
+
+.check label{
+    color:var(--pl-wite);
+    font-size:1.25rem;
+    letter-spacing: 0.75px;
+}
+
+.copyBtn{
+    background-color:transparent;
+    border: none;
+    outline: none;
+}
