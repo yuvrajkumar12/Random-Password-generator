@@ -19,23 +19,24 @@
     --vb-cyan2: hsl(177, 92%, 70%);
     --dk-text: hsl(198, 20%, 13%);
 }
-body{
-    width: 100vh;
+body {
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgba(52, 28, 79, 1) 50%, rgba(88, 7, 125, 1) 100%);
     background-color: #4158D0;
-    background-image: linear-gradient(43deg,#4158D0,0%,#C850C0 46%,#FFCC70,100%);
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
-.container{
+.container {
     width: 90%;
-    max-width: 450%;
+    max-width: 450px;
 }
 /*Heading password Generator*/
 h1{
-    color: var(_--pl-white);
+    color: var(--pl-white);
     opacity: 0.75;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -47,35 +48,36 @@ h1{
     position: relative;
     background-color: var(--dk-violet);
     border-radius: 1rem;
-    border-color: 0.35rem solid var(--it-violet2);
+    border-bottom: 0.35rem solid var(--lt-violet2);
     margin: 1rem 0;
-    padding-top:0.35rem;
+    padding-top: 0.35rem;
 }
 
-.display{
+.display {
     width: 100%;
     background-color: transparent;
     padding: 1.15rem 1rem;
-    color:var(--vb-yellow);
-    font-weight:600;
-    font-size:1.5rem;
-    line-height:30px;
+    color: var(--vb-yellow);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
     letter-spacing: 1px;
     padding-right: 3.25rem;
     border:none;
-}
+  }
 
-.display::placeholder{
+.display::placeholder {
     position:absolute;
-    top:50%;
-    left:1.5rem;
-    font-size: 30px;
-    line-height: 30px;
-    color:var(--vb-Yellow);
-    opacity:0.65;
-    text-transform:uppercase;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height:30px;
+    color:var(--vb-yellow);
+    opacity: 0.65;
+    text-transform: uppercase;
     transform: translateY(-50%);
 }
+
 
 .display-container button{
     position:absolute;
@@ -85,11 +87,11 @@ h1{
 }
 
 .input-container{
-    width: 100%;
+    width:100%;
     background-color: var(--dk-violet);
     border-radius: 1rem;
     padding: 2rem;
-    border-bottom: 0.35rem solid var(--lt--violete);
+    border-bottom: 0.35rem solid var(--lt-violet2);
 }
 
 .length-container{
@@ -108,7 +110,7 @@ h1{
     font-size: 1.5rem;
 }
 
-.strength-container{
+.strength-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,12 +121,18 @@ h1{
 .strength-container p{
     color: var(--pl-white);
     font-size: 1.5rem;
-    border-radius: 50%;
+    
+}
+
+.indicator {
+    width:1.5rem;
+    height:1.5rem;
+    border-radius:50%;
 }
 .generateButton{
     width:100%;
     padding:1rem 0;
-    background-color: var(--vh-violet);
+    background-color: var(--vb-violet);
     text-align: center;
     border-radius: 0.75rem;
     border-bottom: 0.35rem solid var(--vb-yellow);
@@ -143,10 +151,11 @@ h1{
     margin: 1rem 0;
     gap:0 1rem;
 }
+
 .check input{
     appearance: none;
     width: 20px;
-    height:20px;
+    height: 20px;
     border: 1px solid var(--vb-cyan);
     cursor: pointer;
     position: relative;
@@ -169,7 +178,7 @@ h1{
 }
 
 .check label{
-    color:var(--pl-wite);
+    color:var(--pl-white);
     font-size:1.25rem;
     letter-spacing: 0.75px;
 }
@@ -188,17 +197,17 @@ h1{
 .tooltip{
     position: absolute;
     background-color: var(--vb-violet2);
-    color:var(--vb-yellow);
-    font-size:1.25rem;
-    top:-35px;
-    left:-25px;
+    color: var(--vb-yellow);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
     padding: 5px 10px;
     border-radius: 1rem;
     opacity: 0;
     transform: scale(0);
-    transform-origin:bottom;
+    transform-origin: bottom;
     transition: all 250ms ease-in-out;
-}
+  }
 
 .tooltip.active{
     opacity: 1;
@@ -235,9 +244,11 @@ h1{
     transition: all 100ms ease-in;
 }
 
+
 .slider:focus{
     outline: 3px solid var(--vb-yellow);
 }
+
 
 .slider::-webkit-slider-thumb:hover{
     outline: 2px solid var(--vb-yellow);
